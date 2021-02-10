@@ -14,6 +14,7 @@ jobs:
           submodules: recursive
       - name: Psalm
         uses: docker://vimeo/psalm-github-actions
+        continue-on-error: true
         with:
           report_file: results.sarif
       - name: Upload Analysis results to GitHub
